@@ -1,0 +1,48 @@
+#menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0;
+    margin: 0;
+    background-color: #FFC970;
+}
+
+.menu-item {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: rgba(235, 242, 255, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: #444444;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#logo-icon {
+    padding: 5px;
+    background: linear-gradient(90deg, #2979FF 0%, #4C589E 100%);
+    border-radius: 6px;
+}
+#home-icon {
+    margin: 5px auto;
+}
+#products-icon {
+    margin: 5px auto;
+}
+#gestion-icon {
+    margin: 5px auto;
+}

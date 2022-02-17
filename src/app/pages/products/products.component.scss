@@ -1,0 +1,28 @@
+.list {
+    width: 90%;
+	max-width: 1200px;
+	margin: auto;
+	padding: 40px 0;
+    gap: 20px;
+    
+}
+
+.list-item {
+    margin: auto;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.list-item__img {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+}
+
