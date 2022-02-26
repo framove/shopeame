@@ -11,22 +11,30 @@ export class GestionComponent implements OnInit {
 
   public gestionForm: FormGroup;
   public submitted: boolean = false;
+  public inputText: string = '';
+  public productView: Products;
+
+  
+  
 
   constructor(private formBuilder: FormBuilder) { 
-
-    this.gestionForm = this.formBuilder.group({
-      id: ['', [Validators]],
-      name: ['', [Validators]],
-      price: ['', [Validators]],
-      description: ['', [Validators]],
-      stars: ['', [Validators]],
-      image: ['', [Validators]],
-    })
-
   }
 
   ngOnInit(): void {
+    this.gestionForm = this.formBuilder.group({
+      id: [''],
+      name: [''],
+      price: [''],
+      description: [''],
+      stars: [''],
+      image: [''],
+    })
+    console.log(this.gestionForm);
   }
+
+  public keyUp(value: string): void {    
+  	this.inputText = value;
+	}
 
   public onSubmit(): void {
     this.submitted = true;
@@ -40,6 +48,7 @@ export class GestionComponent implements OnInit {
         image: this.gestionForm.get('image')?.value,
       };
       console.log(product);
+      this.productView = product;
       this.gestionForm.reset();
       this.submitted = false;
     }
@@ -47,3 +56,4 @@ export class GestionComponent implements OnInit {
 
 
 }
+

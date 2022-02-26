@@ -1,4 +1,60 @@
-<h2>Formulario de registro:</h2>
+<div class="container">
+<h2>Creación y edicion de registros</h2>
+<div class="container-form">
+<form novalidate (ngSubmit)="onSubmit()" [formGroup]="gestionForm">
+    <fieldset>
+        <label for="id">Id</label>
+        <input type="text" id="id" formControlName="id" #id (keyup)="keyUp(id.value)" />
+        <!-- <div *ngIf="!gestionForm.get('id').valid && (gestionForm.get('id').dirty || submitted)">
+            Has introducido mal el Id
+        </div> -->
+    </fieldset>
 
+    <fieldset>
+        <label for="name">Nombre del producto</label>
+        <input type="text" id="name" formControlName="name" #name (keyup)="keyUp(name.value)" />
+        <!-- <div *ngIf="!gestionForm.get('name').valid && (gestionForm.get('id').dirty || submitted)">
+            Has introducido mal el nombre
+        </div> -->
+    </fieldset>
 
-<p>gestion works!</p>
+    <fieldset>
+        <label for="price">Precio</label>
+        <input type="text" id="price" formControlName="price" #price (keyup)="keyUp(price.value)" />
+        <!-- <div *ngIf="!gestionForm.get('price').valid && (gestionForm.get('id').dirty || submitted)">
+            Has introducido mal el precio
+        </div> -->
+    </fieldset>
+
+    <fieldset>
+        <label for="description">Descripción</label>
+        <input type="text" id="description" formControlName="description" #description (keyup)="keyUp(description.value)" />
+        <!-- <div *ngIf="!gestionForm.get('description').valid && (gestionForm.get('id').dirty || submitted)">
+            Has introducido mal la descripción
+        </div> -->
+    </fieldset>
+
+    <fieldset>
+        <label for="stars">Opiniones</label>
+        <input type="text" id="stars" formControlName="stars" #stars (keyup)="keyUp(stars.value)" />
+        <!-- <div *ngIf="!gestionForm.get('stars').valid && (gestionForm.get('id').dirty || submitted)">
+            Has introducido mal tu opinión
+        </div> -->
+    </fieldset>
+
+    <fieldset>
+        <label for="image">Ruta de la imagen</label>
+        <input type="text" accept="image/*" id="image" formControlName="image" #image (keyup)="keyUp(image.value)" />
+        <!-- <div *ngIf="!gestionForm.get('image').valid && (gestionForm.get('id').dirty || submitted)">
+            Has introducido mal la ruta
+        </div> -->
+    </fieldset>
+
+    <button type="submit" [disabled]="!gestionForm.valid">Submit</button>
+
+</form>
+
+<app-preview class="preview" [productView]="productView"></app-preview>
+</div>
+
+</div>
